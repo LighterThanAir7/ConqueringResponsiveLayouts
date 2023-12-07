@@ -1,0 +1,58 @@
+* {box-sizing: border-box}
+
+:root {
+    --clr-primary: #ee6352;
+    --clr-body: #333;
+    --clr-bg: #ddd;
+}
+
+body {
+    font-family: basic-sans, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.125em;
+    line-height: 1.6;
+    color: var(--clr-body);
+    background: var(--clr-bg);
+}
+
+.content {
+    background: white;
+    padding: 3em;
+    box-shadow: 0 0 3em rgba(0, 0, 0, 0.15);
+
+    width: min(700px, 70%);
+
+    /* Gledaj na ovo kao array s vrijednostima koja gleda onu manju ako je min ili veću ako je max + nema veze kojim su redom */
+
+    /*width: 70%;*/
+    /*max-width: 700px;*/
+
+    /*width: max(500px, 70%);
+
+    THINGS WILL GET WEIRD IF YOU ENTER MORE THAN 2 VALUES
+     */
+
+    /* MOŽEMO KORISTIT Matematičke izraze (ali moraju bit razmaci) unutar min/max funkcije i možemo ih čak i nestat */
+}
+
+.title {
+    margin: 0 0 0.5em;
+    font-weight: 900;
+    color: var(--clr-primary);
+    line-height: 0.8;
+
+    font-size: clamp(2rem, 5vw, 5rem);
+    /*font-size: 5vw; problem kod premalih i prevelikih zaslona*/
+}
+
+p {
+    /*background: lightblue;*/
+
+    /* width: clamp(200px, 50%, 20rem); /* ONLY WORKS WITH 3 VALUES, MINIMUM / MAXIMUM / IDEAL width */
+
+    /*font-size: calc(1vw + 0.5rem);*/
+
+}

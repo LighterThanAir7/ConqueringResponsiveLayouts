@@ -1,0 +1,65 @@
+
+
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+}
+
+.example {
+    width: 90%;
+    margin: 5em auto;
+    padding: 10em 0;
+    background-color: steelblue;
+}
+
+/* ako ne napišemo media-type.. targeta sve
+
+() - media features... widths / heights / orientations
+
+*/
+
+/* 600px or BIGGER */
+/* MOBILE FIRST pa QUERY ZA DESKTOP */
+@media (min-width: 600px) {
+    .example {
+        background-color: olivedrab;
+    }
+}
+
+/* 600px or SMALLER */
+/* DESKTOP FIRST pa QUERY ZA MOBILE */
+@media (max-width: 600px) {
+
+}
+
+@media (max-width: 800px) {
+    .example {
+        background-color: orangered;
+    }
+}
+
+/* Možemo kombinirati min i max da dobijemo RANGE */
+@media (min-width: 600px) and (max-width: 900px) {
+
+}
+
+/*
+###########################################################
+###                        NAPOMENA                     ###
+###########################################################
+
+- Bitan je redoslijed kojim pišemo querije zato što moramo imati prethodni
+  condition da bi se uopće odnosili na nešto, a onda ako imamo više njih u nizu
+  a da djeluju na istu stvar... moramo ići po redu veličine
+
+  npr. ako prvo stavimo pozadinu po defaultu: PLAVA
+
+  1. Media - kaže (min-width: 800px) => CRVENA
+           - znači da će CRVENA bit na > 800px width-a
+
+  2. Media - kaže (min-width: 600px) => ZELENA
+           - ovaj uvjet nikad neće biti ostvaren jer tražimo > 600px
+             a to je već 1. Media... tako da će opet bit CRVENA
+ */

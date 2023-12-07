@@ -1,0 +1,118 @@
+/* 
+////// For this challenge ///////
+
+- You will have to modify the HTML
+
+- You can add new classes in the HTML
+  if you need to
+
+// Requirements
+1. The headings in the first row must be
+   a different color
+2. The two .col at the bottom must go next
+   to one another
+3. The section at the bottom should have
+   a dark background color and a different
+   color of text
+4. I've removed the "gap" that I created,
+   so you'll have to add it back in
+
+   */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+.three-col h2 {
+    color: #87629A;
+}
+
+.three-col p {
+    color: #3A3A3A;
+}
+
+.two-col{
+    color: white;
+}
+
+.container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.three-col {
+    background-color: white;
+    padding: 3em 0;
+}
+
+.two-col {
+    background-color: #136C72;
+    padding: 3em 0;
+}
+
+.row {
+    /* display: flex => flex container */
+    display: flex;
+    
+    column-gap: 30px;
+}
+
+.col {
+    /* these are now flex items */
+    width: 100%;
+    text-align: center;
+}
+
+.hero {
+    padding: 100px 0;
+    background-color: #23424A;
+    color: #FFF;
+}
+
+.hero__text {
+    width: 60%;
+}
+
+.hero p {
+    margin-bottom: 3em;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase; 
+    color: #23424A;
+    font-weight: 900;
+    background-color: #38CFD9;
+    padding: .75em 2em;
+    border-radius: 100px;
+}
+
+.btn:hover,
+.btn:focus {
+    opacity: .75; 
+}
+
+/*
+NOTES - mogao sam koristit BEM konvenciju i imenovat sve iteme h2 i p sa klasom
+
+npr. three-col__title i three-col__text i onda njih stavit svugdje i posebno uredit
+
+Također sam mogao napravit utility klasu za text-center i onda nju stavit u three col i two col, ili zasebno
+kao css pravilo u svaki selektor zasebno
+ */

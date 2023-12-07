@@ -1,0 +1,16 @@
+CSS em and rem explained
+https://www.youtube.com/watch?v=_-aDOAMmDHI
+
+REM - Padding, margin, gleda u ROOT EM (HTML ili ROOT font-size 16px...)   
+
+
+EM  - Compunding, ako imamo npr. GRID i unutar njega DIV i unutar njega H1 i p
+    - GRIDU stavimo font size na 2em, to je 16 x 2 = 32px
+    - onda DIV unutra ako ima isto 2 em, on će gledat svoj PARENT odnosno GRID, pa će to bit 32 x 2 = 64px
+    - i na kraju H1 i p, njima je parent DIV, ako podesimo njima font-size na 2em, opet će bit 64 x 2 = 128px
+    
+    - Ako koristimo margine ili padding s EM unitima, npr:
+    font-size: 2.5em
+    margin-bottom: 1em
+    
+    => naš margin zapravo gleda ovaj 2.5em, jer je to font-size za trenutni element, pa je margina zapravo jednaka 2.5em

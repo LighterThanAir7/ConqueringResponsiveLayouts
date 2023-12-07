@@ -1,0 +1,130 @@
+:root {
+    --bg-vanilla: #F3EED9;
+    --bg-white: #FFF;
+    --bg-black: #222C2A;
+    --bg-brown: #824936;
+    --ff-light: 'Roboto Light', sans-serif;
+    --ff-regular: 'Roboto', sans-serif;
+    --ff-header: 'Playfair Display', serif;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1.3125rem; /* 21px */
+    font-weight: 400;
+    font-family: var(--ff-regular);
+}
+
+img {
+    width: 100%;
+}
+
+/* -------------- UTILITY CLASSES -------------- */
+.text-center {
+    text-align: center;
+}
+
+/* Header + Svaki Section ima TOP i BOT padding 4rem */
+header,
+section {
+    padding: 2rem 0;
+}
+
+/* Ako je širina > 41.25em = 660px... padding = 7em, inače 4em */
+@media (min-width: 41.25em) {
+    header,
+    section {
+        padding: 4em 0;
+    }
+}
+
+.header-info-text {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+/* Svi Headeri imaju font-family */
+h1,
+h2 {
+    font-family: var(--ff-header);
+    color: var(--bg-brown);
+    line-height: 1;
+}
+
+h1 {
+    font-size: 3.75rem;
+    color: var(--bg-brown);
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+.container {
+    margin-inline: auto;
+    width: min(90%, 70.5rem); /* 1128px / 16px = 70.5rem */
+}
+
+.d-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ako je širina > 660px, flex-direction = row, inače column */
+@media (min-width: 41.25em) {
+    .d-flex {
+        flex-direction: row;
+    }
+    .d-flex > * {       /* sva direktna djeca žele bit najveća moguća */
+        flex-basis: 100%;
+    }
+    .d-flex > * + * {
+        margin-left: 4em;
+    }    /* adjacent sibling selector, ANY ELEMENT THAT HAS A SIBLING BEFORE IT, not the parent */
+}
+
+.container--narrow {
+    max-width: 35rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bg-vanilla {
+    background-color: var(--bg-vanilla);
+}
+
+.bg-white {
+    background-color: var(--bg-white);
+}
+
+.bg-black {
+    background-color: var(--bg-black);
+    color: var(--bg-white);
+}
+
+.bg-brown {
+    background-color: var(--bg-brown);
+    color: var(--bg-white);
+}
+
+.bg-black h2,
+.bg-brown h2 {
+    color: var(--bg-vanilla);
+}

@@ -1,0 +1,19 @@
+CTRL + ALT + L - nice & clean formatted code
+--------------------------------------------
+
+Display flex kaže da direktna djeca zadanog reda budu stupci koji pokušavaju zauzeti 100% mjetsa
+
+- flex itemi se uvijek pokušavaju smanjiti na minimalnu vrijednost koju mogu ovisno o tome koliko itema ima
+    - budući da imamo troje djece u jednom redu, svi moraju zauzimat jednako mjesa
+    - dodamo width: 100% (kao idelani flex size, čak i ako imamo manji content u nekom itemu)
+
+- problem bude ako ima previše stupaca
+
+ADJACENT SIBLING SELECTOR (znak +)
+- ako imamo 3 stupca, napišemo
+
+.col + .col {
+    background-color: limegreen;
+}
+
+- selektirat ćemo one stupce koji nemaju stupac prije njih, dakle sve osim prvog (gledaj HTML kod)

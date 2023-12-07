@@ -1,0 +1,42 @@
+* {box-sizing: border-box}
+
+body {
+    margin: 0;
+}
+
+.parent {
+    background-color: #23424A;
+    padding: 50px;
+
+    /*width: 900px; */
+    /* Issue: SIDE SCROLLING ako je stranica manja od 900px */
+
+    margin: 0 auto; /* center on screen */
+
+    /* Problem kod ovoga je što ljudi rade niz MEDIA QUERRY-a koji bi trebali
+       rješiti ovu situaciju, ali ju moraju prilagođavati za sve manji i manji
+       layout, čime se KOMPLICIRA situacija
+     */
+
+    /* Ako ne setamo WIDTH, naš layout je RESPONSIVAN
+
+    Zašto je po DEFAULTU responzivno ?
+
+    => DEFAULT WIDTH za BLOCK LEVEL ELEMENTE (div, heading, paragrafi...)
+    => width = 100% (of the parent element)
+
+    - U ovom slučaju .parent klasi je parent zapravo viewport (body)
+    */
+
+    width: 80%;
+
+    /* Ovo će uvijek zauzimati 80% parent elementa (u ovom slučaju VIEWPORT), neovisno o tome
+       kako povećavamo / smanjujemo stranicu */
+}
+
+.child {
+    background-color: #38CFD9;
+
+    /* Just to get us started, not recommended to set heights */
+    height: 250px;
+}

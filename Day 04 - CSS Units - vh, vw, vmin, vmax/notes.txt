@@ -1,0 +1,22 @@
+CSS Units: vh, vw, vmin, vmax
+https://www.youtube.com/watch?v=IWFqGsXxJ1E
+
+The difference between vw (or vh) and percentages is that:
+vw and vh are relative to the viewport -- whereas -- %'s are relative to the parent element.
+
+Kada koristiti vh?
+
+- kada imamo height: 100vh (100% vh) i želimo na nekom elementu staviti padding... možemo koristiti npr. TOP i BOT padding u vh unitima
+- koristit vh za male fontove je nezgodno za jako male ili jako velike ekrane (govorimo o visini viewporta)
+    -> trebalo bi imati SET SIZE za JAKO VELIKE i JAKO MALE ekrane... sve između toga je uredu
+
+Kada koristiti vw?
+
+- za font-size za title, problem kod ovoga je da u nekom trenutku može postati premalo / preveliko ovisno o širini zaslona na kojem gledamo
+    -> preporuka kod ovoga je da imamo SET SIZE za JAKO VELIKE ekrane i JAKO MALE ekrane... sve između toga je uredu
+
+- NAPOMENA: vw nije toliko dobar za paragraf tekst jer je on generalno manji i nije boldan
+
+Kada koristiti vmin?
+
+- vmin uspoređuje vh i vw, kada neka od njih postane manja (npr. vw)... tekst će se smanjit po x-osi i širit prema dolje, a ako vw > vh, onda će tekst ići u visinu...??

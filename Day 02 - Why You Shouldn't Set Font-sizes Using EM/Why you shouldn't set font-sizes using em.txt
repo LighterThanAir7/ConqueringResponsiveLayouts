@@ -1,0 +1,12 @@
+https://www.youtube.com/watch?v=pautqDqa54I
+Why you shouldn't set font-sizes using em
+
+When to use EM or REM?
+
+Zašto treba bit oprezan s EM unitom
+
+em's font size are looking at parent font size, compunding sizes... množi je kako ide parent -> djete -> djete
+
+For font-sizes, always use "rem" to avoid compounding problem
+		Use "em" for properties other than fontSize like margin, padding, width etc...
+		rem are useful when we are trying to use media queries

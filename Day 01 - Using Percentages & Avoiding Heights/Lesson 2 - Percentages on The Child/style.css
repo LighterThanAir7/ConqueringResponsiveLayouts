@@ -1,0 +1,32 @@
+* {box-sizing: border-box}
+
+body {
+    margin: 0;
+}
+
+.parent {
+    background-color: #23424A;
+    padding: 50px;
+
+    margin: 0 auto;
+    width: 80%;
+}
+
+.child {
+    background-color: #38CFD9;
+
+    /*width: 750px; */
+    width: 50%; /* - Imat ćemo overflow prema dolje, ali to je već SETANI height problem... */
+
+    /* MISTAKE => CHILD ima veći WIDTH od PARENT*a */
+
+    /* OVERFLOWING -> CAUSING SIDE SCROLLING - "CSS IS AWESOME JOKE" */
+
+    /* Ako dodamo neki tekst unutra, možemo scrollat u stranu i dalje pročitat taj sadržaj
+       jer CSS pokušava spriječit gubitak informacija po DEFAULTU i radi OVERFLOW
+
+       - postoji opcija => overflow: hidden; ali onda gubimo taj sadržaj, CUT OFF
+     */
+
+    height: 250px;
+}
